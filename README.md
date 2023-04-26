@@ -1,1 +1,0 @@
-# javiergranizoaguilar.github.io
