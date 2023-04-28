@@ -1,3 +1,6 @@
+*{
+    margin: 0px;
+}
 header{
     background: #0d9108;
 }
@@ -5,5 +8,20 @@ main{
     background: #095770;
 }
 footer{
-    background: #6e6702;
+    color: white;
+    background: #000000;
+    text-align: center;
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+
+}
+nav>section{
+    border-style: solid;
+}
+.bonefire{
+    height: 200px;
+    width: 200px;
 }
