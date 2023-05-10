@@ -1,27 +1,123 @@
-*{
-    margin: 0px;
-}
-header{
-    background: #0d9108;
-}
-main{
-    background: #095770;
-}
-footer{
-    color: white;
-    background: #000000;
-    text-align: center;
+/* Estilos generales */
 
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
+	margin: 0;
+	padding: 0;
 }
-nav{
-    display: flex;
-    justify-content: space-around;
 
+a {
+	color: #333;
+	text-decoration: none;
 }
-nav>section{
-    border-style: solid;
+
+a:hover {
+	text-decoration: underline;
 }
-.bonefire{
-    height: 200px;
-    width: 200px;
+
+/* Estilos del encabezado */
+
+header {
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+
+h1 {
+	margin: 0;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	font-size: 18px;
+}
+
+nav a:hover {
+	color: #666;
+}
+
+/* Estilos del contenido principal */
+
+main {
+	margin-top: 100px;
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 20px;
+}
+
+li h3 {
+	margin-top: 0;
+}
+
+p {
+	line-height: 1.5;
+}
+
+/* Estilos del formulario de contacto */
+
+form {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #666;
 }
