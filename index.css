@@ -143,6 +143,7 @@
 	height: 200px;
 	width: 100%;
 	object-fit: cover;
+	src: url(download5.gif);
   }
 
   #contacto{
@@ -179,19 +180,47 @@
 	}
   }
   .cambiarFondo header {
-	background-color: #000000;
-	color: #ffffff;
+	background-color: #ffffff;
+	color: #000000;
+  }
+  .cambiarFondo .menu a{
+	color: #000000;
   }
   
   .cambiarFondo footer {
-	background-color: #000000;
-	color: #ffffff;
+	background-color: #ffffff;
+	color: #000000;
   }
   .cambiarFondo #inicio {
-	background: black;
-	color: #ffffff;
+	background: rgb(255, 255, 255);
+	color: #000000;
   }
   .cambiarFondo #contacto {
-	background: black;
-	color: #ffffff;
+	background: rgb(255, 255, 255);
+	color: #000000;
+  }
+  .cambiarFondo section {
+	background: rgb(255, 255, 255);
+	color: #000000;
+  }
+
+
+body.cambiarFondo {
+	background-color: rgb(255, 255, 255);
+  }
+  #habilidades {
+	background-color: #c9c9c9;
+  }
+  
+  .habilidad {
+	background-color: #0b671e;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .habilidad i {
+	color: #a9a9a9;
+  }
+  
+  .habilidad p {
+	color: #979797;
   }
