@@ -1,9 +1,10 @@
-*{
+* {
 	text-align: center;
 	margin-left: 0px;
 	margin-right: 0px;
-}
-body {
+  }
+  
+  body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -15,6 +16,8 @@ body {
 	background-color: #707070;
 	color: #000000;
 	padding: 20px;
+	position: sticky;
+	top: 0px;
   }
   
   nav ul {
@@ -22,12 +25,15 @@ body {
 	padding: 0;
 	margin: 0;
   }
-  ul{
+  
+  ul {
 	list-style-type: none;
   }
-  li{
+  
+  li {
 	list-style-type: none;
   }
+  
   nav ul li {
 	display: inline;
   }
@@ -37,21 +43,45 @@ body {
 	text-decoration: none;
 	padding: 10px;
   }
-  img{
+  
+  .menu-icon {
+	display: none;
+	color: #000000;
+	cursor: pointer;
+  }
+  
+  @media (max-width: 750px) {
+	.menu {
+	  display: none;
+	  padding: 10px;
+	}
+  
+	.menu.active {
+	  display: block;
+	  background-color: #707070;
+	  position: absolute;
+	  top: 65px;
+	  left: 0;
+	  width: 100%;
+	}
+  
+	.menu.active li {
+	  display: block;
+	  margin-bottom: 10px;
+	}
+  
+	.menu-icon {
+	  display: block;
+	}
+  }
+  
+  img {
 	height: 200px;
 	width: 300px;
   }
-header {
-	position: sticky;
-	top: 0px;
-  }
-  section{
+  
+  section {
 	margin-left: 25%;
-	margin-right:25% ;
+	margin-right: 25%;
   }
-  @media(max-width:750px){
-
-	img{
-		width: 50%;
-	}
-  }
+  
