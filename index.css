@@ -208,19 +208,19 @@
 body.cambiarFondo {
 	background-color: rgb(255, 255, 255);
   }
-  #habilidades {
+  .cambiarFondo #habilidades {
 	background-color: #c9c9c9;
   }
   
-  .habilidad {
+  .cambiarFondo .habilidad {
 	background-color: #0b671e;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .habilidad i {
+  .cambiarFondo .habilidad i {
 	color: #a9a9a9;
   }
   
-  .habilidad p {
+  .cambiarFondo .habilidad p {
 	color: #979797;
   }
