@@ -1,125 +1,420 @@
 <!DOCTYPE html>
-<html lang="es">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio</title>
-  <link rel="stylesheet" href="index.css">
-  <script src="https://kit.fontawesome.com/76bf06386e.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="pngtree-lightning-wolf-logo-for-esport-team-png-image_5520912.png">
+<html class="dark" lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Developer Portfolio - Javier Granizo Aguilar</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "primary-hover": "#1d4ed8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111722",
+                        "background-card": "#1a2332",
+                        "accent-purple": "#a855f7",
+                        "accent-green": "#22c55e",
+                        "accent-blue": "#3b82f6",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["Fira Code", "monospace"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
 </head>
-
-<body>
-  <header>
-    <nav>
-      <div class="menu-icon">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#acerca-de">Acerca de</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#portafolio">Portafolio</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="inicio">
-    <h2>Bienvenido/a a mi portafolio</h2>
-    <p>Soy Javier, un diseñador y programador. Me apasiona la programación, especialmente orientada a juegos.</p>
-    <p>En este portafolio, encontrarás información sobre mi experiencia laboral, habilidades y ejemplos de proyectos anteriores. Estoy comprometido a brindar soluciones creativas y de calidad.</p>
-    <a href="#contacto" class="btn">¡Contáctame!</a>
-    <button id="cambiarFondoBtn" class="btn">Cambiar Fondo</button>
-  </section>
-
-  <section id="acerca-de">
-    <h2>Acerca de mí</h2>
-    <p>Soy un apasionado con 4 años de experiencia en desarrollo de páginas web y desarrollo de aplicaciones. Me especializo en HTML, CSS, JavaScript y C#. A lo largo de mi carrera, he trabajado con diferentes clientes y proyectos, brindando soluciones efectivas y creativas.</p>
-    <p>Me destaco por mi atención al detalle, habilidades de comunicación y capacidad para trabajar en equipo. Siempre estoy en busca de aprender nuevas tecnologías y mejorar mis habilidades para mantenerme actualizado en un entorno en constante evolución.</p>
-  </section>
-
-  <section id="experiencia">
-    <h2>Experiencia</h2>
-    <ul class="experiencia-lista">
-      <li>
-        <h3>Freelance</h3>
-        <img id="perfilImg" src="download5.gif" alt="">
-        <p>Trabajé como desarrollador web y diseñé sitios web para clientes individuales.</p>
-      </li>
-      <li>
-        <h3>Empresa XYZ</h3>
-        <img id="perfilImg" src="download5.gif" alt="">
-        <p>Fui miembro del equipo de desarrollo y participé en el desarrollo de aplicaciones web.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="habilidades">
-  <h2>Habilidades</h2>
-  <div class="habilidades-container">
-    <div class="habilidad">
-      <i class="fab fa-html5"></i>
-      <p>HTML5</p>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+<!-- Navigation -->
+<div class="fixed top-0 z-50 w-full bg-[#111722]/90 backdrop-blur-md border-b border-[#232f48]">
+    <div class="layout-container flex justify-center w-full">
+        <div class="flex items-center justify-between w-full max-w-[1280px] px-6 py-4 lg:px-10">
+            <!-- Logo -->
+            <div class="flex items-center gap-2 text-white hover:text-primary transition-colors cursor-pointer group">
+                <span class="material-symbols-outlined text-primary group-hover:rotate-12 transition-transform">terminal</span>
+                <h2 class="text-lg font-bold tracking-tight">&lt;JG /&gt;</h2>
+            </div>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#about">About</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#skills">Skills</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#experience">Experience</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#education">Education</a>
+            </nav>
+            <!-- CTA -->
+            <div class="flex items-center gap-4">
+                <a class="hidden sm:flex items-center justify-center h-10 px-5 bg-primary hover:bg-primary-hover text-white text-sm font-bold rounded-lg transition-all shadow-lg shadow-primary/20" href="#contact">
+                    Contact Me
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="habilidad">
-      <i class="fab fa-css3"></i>
-      <p>CSS3</p>
-    </div>
-    <div class="habilidad">
-      <i class="fab fa-js"></i>
-      <p>JavaScript</p>
-    </div>
-      <div class="habilidad">
-        <i class="fab fa-csharp"></i>
-        <p>C#</p>
-      </div>
-      <div class="habilidad">
-        <i class="fab fa-java"></i>
-        <p>Java</p>
-      </div>
-      <div class="habilidad">
-        <i class="fas fa-database"></i>
-        <p>SQL</p>
-      </div>
-  </div>
-</section>
-
-
-  <section id="portafolio">
-    <h2>Portafolio</h2>
-    <p>Aquí se muestran algunos de los proyectos en los que he trabajado:</p>
-    <ul class="proyectos-lista">
-      <li>
-        <h3>Proyecto 1</h3>
-        <img id="perfilImg" src="download5.gif" alt="">
-      </li>
-      <li>
-        <h3>Proyecto 2</h3>
-        <img id="perfilImg" src="download5.gif" alt="">
-      </li>
-      <li>
-        <h3>Proyecto 3</h3>
-        <img id="perfilImg" src="download5.gif" alt="">
-      </li>
-    </ul>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Puedes ponerte en contacto conmigo a través de los siguientes medios:</p>
-    <p><strong>Correo electrónico:</strong> javiercelia123@gmail.com</p>
-    <p><strong>Teléfono:</strong> 123-456-789</p>
-  </section>
-
-  <footer>
-    <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-facebook"></i>
-  </footer>
-
-  <script src="index.js"></script>
-
-</body>
-
-</html>
+</div>
+<!-- Main Content Wrapper -->
+<main class="flex flex-col items-center pt-24 pb-20 px-6 sm:px-10">
+    <!-- Hero Section -->
+    <section class="w-full max-w-[1024px] min-h-[85vh] flex flex-col justify-center py-10 lg:py-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Hero Text -->
+            <div class="flex flex-col gap-6 order-2 lg:order-1">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+</span>
+                    <span class="text-xs font-semibold text-primary uppercase tracking-wider">Available for work</span>
+                </div>
+                <div class="space-y-2">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+                        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Javier</span>
+                    </h1>
+                    <h2 class="text-xl sm:text-2xl font-medium text-slate-300">
+                        Junior Software Developer <span class="font-mono text-primary text-lg px-2 py-0.5 bg-primary/10 rounded">DAM &amp; DAW</span>
+                    </h2>
+                </div>
+                <p class="text-base sm:text-lg text-slate-400 max-w-lg leading-relaxed">
+                    Based in Granada, Spain. Passionate about building robust backend architectures and clean frontend solutions. Turning complex problems into elegant code.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-2">
+                    <button class="flex items-center gap-2 h-12 px-6 bg-primary hover:bg-primary-hover text-white text-base font-bold rounded-lg transition-all shadow-lg shadow-primary/25 group">
+                        <span class="material-symbols-outlined text-[20px] group-hover:animate-bounce">download</span>
+                        Download CV
+                    </button>
+                    <button class="flex items-center gap-2 h-12 px-6 bg-[#232f48] hover:bg-[#2d3b55] border border-slate-700 text-white text-base font-bold rounded-lg transition-all">
+                        <span class="material-symbols-outlined text-[20px]">code</span>
+                        GitHub
+                    </button>
+                    <button class="flex items-center gap-2 h-12 px-6 bg-[#232f48] hover:bg-[#2d3b55] border border-slate-700 text-white text-base font-bold rounded-lg transition-all">
+                        <span class="material-symbols-outlined text-[20px]">connect_without_contact</span>
+                        LinkedIn
+                    </button>
+                </div>
+            </div>
+            <!-- Hero Visual (Code Card) -->
+            <div class="order-1 lg:order-2 w-full flex justify-center lg:justify-end">
+                <div class="w-full max-w-md relative group">
+                    <!-- Glow Effect -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                    <!-- Terminal Window -->
+                    <div class="relative rounded-xl bg-[#1e293b] border border-slate-700 shadow-2xl overflow-hidden font-mono text-sm leading-relaxed">
+                        <!-- Terminal Header -->
+                        <div class="flex items-center px-4 py-3 bg-[#0f172a] border-b border-slate-700 gap-2">
+                            <div class="flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="flex-1 text-center">
+                                <span class="text-xs text-slate-400">profile.json — bash</span>
+                            </div>
+                        </div>
+                        <!-- Terminal Body -->
+                        <div class="p-6 overflow-x-auto">
+                            <div class="flex">
+                                <div class="text-slate-600 select-none text-right pr-4 border-r border-slate-700 mr-4">
+                                    1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8
+                                </div>
+                                <div class="text-blue-300">
+                                    <span class="text-purple-400">const</span> <span class="text-yellow-300">javier</span> <span class="text-white">=</span> {<br/>
+                                      <span class="text-green-400">role</span>: <span class="text-orange-300">"Full Stack Developer"</span>,<br/>
+                                      <span class="text-green-400">location</span>: <span class="text-orange-300">"Granada, ES"</span>,<br/>
+                                      <span class="text-green-400">status</span>: <span class="text-orange-300">"Open to Work"</span>,<br/>
+                                      <span class="text-green-400">skills</span>: [<br/>
+                                        <span class="text-orange-300">"Java"</span>, <span class="text-orange-300">"Symfony"</span>, <span class="text-orange-300">"React"</span><br/>
+                                      ],<br/>
+                                      <span class="text-green-400">coffeeLevel</span>: <span class="text-purple-400">Infinity</span><br/>
+                                    };
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="w-full max-w-[960px] py-16 sm:py-24 border-t border-slate-800" id="about">
+        <div class="flex flex-col gap-6">
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-primary text-3xl">person</span>
+                <h2 class="text-3xl font-bold text-white">About Me</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mt-4">
+                <div class="md:col-span-2">
+                    <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                        I am a dedicated Junior Software Developer with a dual specialization in <strong class="text-white">Web Application Development (DAW)</strong> and <strong class="text-white">Multi-platform Application Development (DAM)</strong>. My passion lies in writing clean, efficient code and solving complex algorithmic problems.
+                    </p>
+                    <p class="text-slate-300 text-lg leading-relaxed">
+                        Recently, I completed a significant internship at <strong class="text-primary">NTT DATA</strong>, where I honed my skills in a professional, agile environment. I thrive in collaborative settings and am constantly looking to learn new technologies to expand my stack.
+                    </p>
+                </div>
+                <!-- Stats / Quick Info -->
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="bg-background-card p-4 rounded-xl border border-slate-800 flex items-center gap-4">
+                        <div class="bg-blue-500/20 p-2 rounded-lg text-blue-400">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-bold">Location</p>
+                            <p class="text-white font-medium">Granada, Spain</p>
+                        </div>
+                    </div>
+                    <div class="bg-background-card p-4 rounded-xl border border-slate-800 flex items-center gap-4">
+                        <div class="bg-purple-500/20 p-2 rounded-lg text-purple-400">
+                            <span class="material-symbols-outlined">school</span>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-bold">Degree</p>
+                            <p class="text-white font-medium">Double Major (DAM + DAW)</p>
+                        </div>
+                    </div>
+                    <div class="bg-background-card p-4 rounded-xl border border-slate-800 flex items-center gap-4">
+                        <div class="bg-green-500/20 p-2 rounded-lg text-green-400">
+                            <span class="material-symbols-outlined">language</span>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-bold">Languages</p>
+                            <p class="text-white font-medium">Spanish (Native), English (B2)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Technical Skills Section -->
+    <section class="w-full max-w-[960px] py-16 border-t border-slate-800" id="skills">
+        <div class="flex items-center gap-4 mb-10">
+            <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+            <h2 class="text-3xl font-bold text-white">Technical Stack</h2>
+        </div>
+        <div class="grid gap-10">
+            <!-- Category 1: Backend & Languages -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-medium text-slate-400 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    Core Languages &amp; Backend
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-blue-500 rounded-lg transition-colors cursor-default">
+                        <img alt="Java Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIJ6PA_ZZQm4tmEm0ExsfNtzaZgYoLZz9H4r5BfsTzF77ZVxLloxE_ao58qDzaiLnuaNJFwoz09gEqLcb1JgK922yaAJdcRUc1xKDLY6GEn7HylW6Cs5NI6UHscNwiY1GQvDuHBGL4zOdjr4DulMVIbGdWc5MAEuklSySexp-2RHnzFMLM_hpUl9UyIl3X2J8zVzhRF5KZKQP9-Tgk0OixUF4pOOMzOeQTnDNIAiIZGvFU70N2B9nn3lZ3bFTL-XxeQE_qTVjmKfk"/>
+                        <span class="font-medium text-slate-200">Java</span>
+                    </div>
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-purple-500 rounded-lg transition-colors cursor-default">
+                        <img alt="C# Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgV8HJdvSfuK7UP95103okgIRwoKnEzDn9iCcI9M5XaWv9ZPVvLuDwsWi8fXXFRBny20uFcScrcpu4bi-DCiHJ_-pL7YC_BYIz2mOhyyxrl2zpotB4Z31936X64xhSo-LJtdVuXtsrgSX2X-c9W5lyXU74offdlOVV2Lc9-KRTC-YprArCSUPy9BD-uXSyGyYcTykLTxaKkHZPjqMy2BpP5sGcCGv1r4dxut42__r-j62k-FZCsNGQDDzN959r48cGAZfRv7ae7Gc"/>
+                        <span class="font-medium text-slate-200">C#</span>
+                    </div>
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-indigo-500 rounded-lg transition-colors cursor-default">
+                        <img alt="PHP Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC71gJKAulu-ApFoRDG5coStLshGMTxgFWYuiX4XuFbO9pB6Pvu7Jmi5rGwmpW1w4OuF3dpwhQW50DLddgmYxkQ6TL06p8c8RrBKtQV4Utj5fDiDbudb2xpCLUoyAlCof9n-Awx5RJgNsPdvChba0K5gOmYEk4ZF3iDq5UTLrqdc7j_-XJ5Cg8Dmje7nyyq9K2amDMDGMg7NfjZAD7M_WX84mNGNZ7Sdb50FW_F_x7quY2dfCMlI5155mP55MzT2lnrwLw6NQw1XRg"/>
+                        <span class="font-medium text-slate-200">PHP</span>
+                    </div>
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-white rounded-lg transition-colors cursor-default">
+                        <img alt="Symfony Icon" class="w-6 h-6 invert opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClgpnMzNCfqKYGvWIkIXeqxYfH_CZxCJPT_DpNPb6opRiMNznzV2uHyMwSDEOW6UOl-VcYAduNJlUbbQZoCEUQ81haBTdSoN98Yr35vt0Wl0fmLOoWr_bl15Z7MkhaMqlI5p1hPNCZsx9Sym4gXvO4LFnpyiQnEzdAGrdX6iMg-8POrZU-DZaT67oJFbZEJojt6DTYz5znRFCeTeNzOu8jw_S_FjURBq8sr1SpNMkFfZ0ffWhGVs6e_P7T1BqTJTIo1qm1shQEsVw"/>
+                        <span class="font-medium text-slate-200">Symfony</span>
+                    </div>
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-cyan-500 rounded-lg transition-colors cursor-default">
+                        <img alt="MySQL Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtDvL-1vHLWN75q9egk5xxTvSv-bck99iSNnZJpV7HTX_H5L7hx1jqEfzJF8-gTsjrcx3fOazhbCVfvzn2lich2Xage4hSjfLgmZ_IWTuJvNSputJuGEQu8IjA9Ka0FY0riUw3q4_Bsiq2_JCUheaIlKOpCttCrjXYdt0YbWGjSRMc4Vd_IT5G8N-nc7i_DtBnm3JDJgePfSqy2kgSKrgyk83O81TyXY8FQk-hNwzD7PDQ-xNU90E7to_W_2y-H8bhRYd70IenVUk"/>
+                        <span class="font-medium text-slate-200">MySQL</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Category 2: Frontend -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-medium text-slate-400 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                    Frontend Development
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-yellow-500 rounded-lg transition-colors cursor-default">
+                        <img alt="JS Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJTREYAl-6NbjZgmiegIIAYxVAuehj7Je3Wb4dPwE_c1IYOeA7kNQLed_nqhGfeTt6rhmmcxkYL3xnVcnvKyvpMrqRVO1aTFlL_fwKsCCeIYl21XY9NSO8JdyuoaVkMwW7o9pACv75BZgy2kgQzUbcKxqMqWV_fs3bCVhDGVFmP_hZpO1L301F0h_K_f8I8k1qs61Lhe8hxrB9lk93eyakFgR1ch6523csRW7DTj-e3tZq4pBCtB-0N0jUGWzMMn4hSElbHkh_jIQ"/>
+                        <span class="font-medium text-slate-200">JavaScript</span>
+                    </div>
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-orange-500 rounded-lg transition-colors cursor-default">
+                        <img alt="HTML5 Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVYiYkfsSi45zPN0Ywk3vtDCqfMcZj3WBFaOle1dFRlBsswzB3ZFZt5VP-ORtibTsHZQPEPYkfJNsdtxtvkrpz8N_nwIXLyC8aSkr74xoAE3I2rWVMb5KDouOFncgkix_Bm8pOTw6wTTP014zSqjGBiBJwN3L5YQamYUZcBDRz95YzE6c5ZuFgkmdRf2l64KN_FZG7hpY0FLVEl6pUZ3tY43SpOV5kuMpFxdHEwH1tFcBRcggMVAx3HmpAo6-ZLztunRVD1Hgad4k"/>
+                        <span class="font-medium text-slate-200">HTML5</span>
+                    </div>
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-blue-400 rounded-lg transition-colors cursor-default">
+                        <img alt="CSS3 Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKKwV8TTk16C50x47AjGOiG7i-tc7apuaGexWYGh2eRHrH4DjPT4lZvqiV79fwIIcl1ylaStbhA9oBOij-hWq4v4dxIY9ZFUslZszFBUAfXJTr8zTC3iRbHzc6zUfi7wIADoLW5bVeNAipKq7X5NAQT4VHV0R2XBIBhyI3-EHr9-U7ly_B-esWZKFA7GFJV5eo5B6HbcnCQiwJ11CU_EwPvKT_rdSWRg4hwc2pKXMf3_FlkzW0Q90wDhKCGNcRm3aJDcx3w5W2u6w"/>
+                        <span class="font-medium text-slate-200">CSS3</span>
+                    </div>
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-sky-400 rounded-lg transition-colors cursor-default">
+                        <img alt="Tailwind Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY5eKoCQyaqrWd-JnQS_A5AkwJkgQztI5xJ67uiIL6wpFh6Ilnh8t2lUO4PTRfZ48n8dH2-yz6zqBBzzvqt9QiaPa7663BC9J2zgdm2zTBt_GA2TwUheOX6LC4DHc6c1WI2bNQbMX5lzru2QU7g_wdRtwb8rpuiR9NMrJyAsHnTe4fPytIpzxmP7vBSw1BST65MkhiS4kpbKYYvNE5iipPgTV9tzJWZc-KGRn4RuaZt4S_WwT4ERQhDgAPDWL4czfibby2LXGwp2s"/>
+                        <span class="font-medium text-slate-200">Tailwind CSS</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Category 3: Tools & DevOps -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-medium text-slate-400 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                    Tools &amp; DevOps
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-orange-600 rounded-lg transition-colors cursor-default">
+                        <img alt="Git Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWkdrjP5euW8XT0-he7y5PBP9cGolXoE4KsiH-5G9kyNH68GqDJUseJoFyQ1LaGpErE-bZFCnTNAoCmG0BynulHEOl0mCn3V0ZhyfSnlDBkw4ZOmp7UGv-nVUU1LkDaRllk69D7vfCBWOl3yR263pM2i_D2H0xbxDEARI9uOcuJsCMgYDNjOV924cxdeX9rY6e5Ad-eJ5lQ1aqpFIxQC_lh2nqdDyNuv1G14KYRUoK1XwNi6M6x8VHTDAOoc00dl_fhoRMIA0yp7o"/>
+                        <span class="font-medium text-slate-200">Git</span>
+                    </div>
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-white rounded-lg transition-colors cursor-default">
+                        <img alt="GitHub Icon" class="w-6 h-6 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAShSERc5ems5_K2lDuJfIU9qqpE4ojwER3qu8_CLa23jEhNxiqW0FNwt7H7ekxIz1NIYDvE-kEuQrUF17ipDhpLuIFp9ePfB5V6JJ77498pCqUlJ23stB93-wqX_EHxhAQUII84p-fVmgdzLyMZOqvXjt9Gvwg2qnpjn-AUABZOI7Ow1WNNj9hbQeAKynk9jyBEFgXT-fvDnfvkPXat6aCQKz7Zvxj-LCjv5aRnGkWcUbnNxKR2UZWTyz7AxLsECPfkBbHPKMbc_E"/>
+                        <span class="font-medium text-slate-200">GitHub</span>
+                    </div>
+                    <div class="group relative flex items-center gap-2 px-4 py-3 bg-background-card border border-slate-700 hover:border-blue-600 rounded-lg transition-colors cursor-default">
+                        <img alt="VSCode Icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC8cA0bKbHNEdP5u1RwqOnMXmcOIl1Luk8M2On7pMlM7x4fsShma2v9h9lAOLu8aJZRN-bQyBJOJEydoxJWV74Hk_tAcWAYCZ1GUqOiZTc53CkHlRhSIMmjp8O64hgVg_rCQOa2SM5FDRzaV5XW1NJnqqK9Ne_5BA8LZ17aKvPkwSiwdk3hz9esiF3dJK3nakEd5aUPITtOvw6FvOfwyjLX-gdCb3G4CpjCQjUJSLTvcdMaLwYRSg3JJ_o2E_wy9hNG9rA_vo_MSA"/>
+                        <span class="font-medium text-slate-200">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience & Education Split -->
+    <section class="w-full max-w-[960px] py-16 border-t border-slate-800" id="experience">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+            <!-- Experience Column -->
+            <div class="flex flex-col gap-8">
+                <div class="flex items-center gap-4 mb-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">work_history</span>
+                    <h2 class="text-3xl font-bold text-white">Experience</h2>
+                </div>
+                <div class="relative pl-8 border-l border-slate-700 space-y-12">
+                    <!-- Experience Item -->
+                    <div class="relative">
+                        <div class="absolute -left-[39px] top-1 h-5 w-5 rounded-full border-2 border-primary bg-background-dark"></div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-sm font-mono text-primary font-bold">March 2023 - June 2023</span>
+                            <h3 class="text-xl font-bold text-white">Junior Software Developer</h3>
+                            <div class="flex items-center gap-2 text-slate-400 mb-2">
+                                <span class="material-symbols-outlined text-sm">business</span>
+                                <span>NTT DATA</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Completed an intensive internship focusing on backend development. Collaborated with a team of seniors to maintain legacy Java codebases and migrate specific modules to newer architectures. Gained hands-on experience with agile methodologies (Scrum).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Education Column -->
+            <div class="flex flex-col gap-8" id="education">
+                <div class="flex items-center gap-4 mb-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">school</span>
+                    <h2 class="text-3xl font-bold text-white">Education</h2>
+                </div>
+                <div class="relative pl-8 border-l border-slate-700 space-y-10">
+                    <!-- Education Item 1 -->
+                    <div class="relative">
+                        <div class="absolute -left-[39px] top-1 h-5 w-5 rounded-full border-2 border-slate-500 bg-background-dark"></div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-sm font-mono text-slate-500 font-bold">2023 - 2024</span>
+                            <h3 class="text-xl font-bold text-white">Web App Development (DAW)</h3>
+                            <div class="text-slate-400 text-sm">IES Zaidín-Vergeles</div>
+                            <p class="text-slate-500 text-sm mt-1">Specialization in full-stack web technologies.</p>
+                        </div>
+                    </div>
+                    <!-- Education Item 2 -->
+                    <div class="relative">
+                        <div class="absolute -left-[39px] top-1 h-5 w-5 rounded-full border-2 border-slate-500 bg-background-dark"></div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-sm font-mono text-slate-500 font-bold">2021 - 2023</span>
+                            <h3 class="text-xl font-bold text-white">Multi-platform App Development (DAM)</h3>
+                            <div class="text-slate-400 text-sm">IES Zaidín-Vergeles</div>
+                            <p class="text-slate-500 text-sm mt-1">Foundational programming, Java ecosystem, and mobile development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Placeholder -->
+    <section class="w-full max-w-[960px] py-16 border-t border-slate-800" id="projects">
+        <div class="flex items-center justify-between mb-10">
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-primary text-3xl">code_blocks</span>
+                <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
+            </div>
+            <a class="text-primary hover:text-white text-sm font-bold flex items-center gap-1 transition-colors" href="#">
+                View All on GitHub <span class="material-symbols-outlined text-sm">arrow_outward</span>
+            </a>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Project 1 -->
+            <div class="group bg-background-card rounded-xl border border-slate-800 p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="material-symbols-outlined text-4xl text-blue-400">folder_open</span>
+                    <div class="flex gap-3">
+                        <a class="text-slate-400 hover:text-white transition-colors" href="#">
+                            <span class="material-symbols-outlined">code</span>
+                        </a>
+                        <a class="text-slate-400 hover:text-white transition-colors" href="#">
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Inventory Management System</h3>
+                <p class="text-slate-400 text-sm mb-4">
+                    A robust desktop application built with Java and JavaFX for local businesses to manage stock levels and sales reports.
+                </p>
+                <div class="flex gap-2 text-xs font-mono text-slate-500">
+                    <span class="text-blue-300">Java</span>
+                    <span class="text-blue-300">MySQL</span>
+                    <span class="text-blue-300">JavaFX</span>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="group bg-background-card rounded-xl border border-slate-800 p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="material-symbols-outlined text-4xl text-purple-400">folder_open</span>
+                    <div class="flex gap-3">
+                        <a class="text-slate-400 hover:text-white transition-colors" href="#">
+                            <span class="material-symbols-outlined">code</span>
+                        </a>
+                        <a class="text-slate-400 hover:text-white transition-colors" href="#">
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Personal Portfolio V1</h3>
+                <p class="text-slate-400 text-sm mb-4">
+                    My first portfolio website built using Symfony and Bootstrap, deploying basic MVC principles and responsive design.
+                </p>
+                <div class="flex gap-2 text-xs font-mono text-slate-500">
+                    <span class="text-purple-300">Symfony</span>
+                    <span class="text-purple-300">PHP</span>
+                    <span class="text-purple-300">Twig</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA / Footer -->
+    <footer class="w-full max-w-[960px] py-20 mt-12 border-t border-slate-800 flex flex-col items-center text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Ready to collaborate?</h2>
+        <p class="text-slate-400 max-w-lg mb-8">
+            I'm currently looking for new opportunities as a Junior Developer. Whether you have a question or just want to say hi, my inbox is always open.
+        </p>
+        <a class="flex items-center gap-2 h-12 px-8 bg-transparent hover:bg-primary/10 border border-primary text-primary hover:text-white hover:border-transparent text-base font-bold rounded-lg transition-all mb-12" href="mailto:contact@javiergranizo.dev">
+            <span class="material-symbols-outlined">mail</span>
+            Say Hello
+        </a>
+        <div class="flex flex-col items-center gap-4 text-slate-500 text-sm">
+            <div class="flex gap-6">
+                <a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+                <a class="hover:text-white transition-colors" href="#">GitHub</a>
+                <a class="hover:text-white transition-colors" href="#">Twitter</a>
+            </div>
+            <p>© 2023 Javier Granizo Aguilar. Built with Tailwind CSS.</p>
+        </div>
+    </footer>
+</main>
+</body></html>
