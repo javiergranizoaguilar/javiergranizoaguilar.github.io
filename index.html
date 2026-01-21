@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Them Config -->
+    <!-- Theme Config -->
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -90,18 +90,20 @@
                     Based in Granada, Spain. Passionate about building robust backend architectures and clean frontend solutions. Turning complex problems into elegant code.
                 </p>
                 <div class="flex flex-wrap gap-4 mt-2">
-                    <button class="flex items-center gap-2 h-12 px-6 bg-primary hover:bg-primary-hover text-white text-base font-bold rounded-lg transition-all shadow-lg shadow-primary/25 group">
+                    <a href="./CV_Javier_Granizo_Aguilar.pdf" download="JavierGranizo_CV.pdf" class="flex items-center gap-2 h-12 px-6 bg-primary hover:bg-primary-hover text-white text-base font-bold rounded-lg transition-all shadow-lg shadow-primary/25 group decoration-0">
                         <span class="material-symbols-outlined text-[20px] group-hover:animate-bounce">download</span>
                         Download CV
-                    </button>
-                    <button class="flex items-center gap-2 h-12 px-6 bg-[#232f48] hover:bg-[#2d3b55] border border-slate-700 text-white text-base font-bold rounded-lg transition-all">
+                    </a>
+
+                    <a href="https://github.com/javiergranizoaguilar" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 h-12 px-6 bg-[#232f48] hover:bg-[#2d3b55] border border-slate-700 text-white text-base font-bold rounded-lg transition-all decoration-0">
                         <span class="material-symbols-outlined text-[20px]">code</span>
                         GitHub
-                    </button>
-                    <button class="flex items-center gap-2 h-12 px-6 bg-[#232f48] hover:bg-[#2d3b55] border border-slate-700 text-white text-base font-bold rounded-lg transition-all">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/javier-granizo-aguilar-81a830380" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 h-12 px-6 bg-[#232f48] hover:bg-[#2d3b55] border border-slate-700 text-white text-base font-bold rounded-lg transition-all decoration-0">
                         <span class="material-symbols-outlined text-[20px]">connect_without_contact</span>
                         LinkedIn
-                    </button>
+                    </a>
                 </div>
             </div>
             <!-- Hero Visual (Code Card) -->
@@ -398,23 +400,31 @@
         </div>
     </section>
     <!-- CTA / Footer -->
-    <footer class="w-full max-w-[960px] py-20 mt-12 border-t border-slate-800 flex flex-col items-center text-center">
+    <footer class="w-full max-w-[960px] py-20 mt-12 border-t border-slate-800 flex flex-col items-center text-center" id="contact">
         <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Ready to collaborate?</h2>
         <p class="text-slate-400 max-w-lg mb-8">
             I'm currently looking for new opportunities as a Junior Developer. Whether you have a question or just want to say hi, my inbox is always open.
         </p>
-        <a class="flex items-center gap-2 h-12 px-8 bg-transparent hover:bg-primary/10 border border-primary text-primary hover:text-white hover:border-transparent text-base font-bold rounded-lg transition-all mb-12" href="mailto:contact@javiergranizo.dev">
-            <span class="material-symbols-outlined">mail</span>
-            Say Hello
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+            <a class="flex items-center gap-2 h-12 px-8 bg-transparent hover:bg-primary/10 border border-primary text-primary hover:text-white hover:border-transparent text-base font-bold rounded-lg transition-all"
+               href="mailto:javiercelia123@gmail.com?subject=Consulta sobre desarrollo">
+                <span class="material-symbols-outlined">mail</span>
+                Say Hello
+            </a>
+            <a class="flex items-center gap-2 h-12 px-8 bg-transparent hover:bg-green-500/10 border border-slate-700 hover:border-green-500 text-slate-300 hover:text-green-500 text-base font-bold rounded-lg transition-all" href="tel:+34644745523">
+                <span class="material-symbols-outlined">call</span>
+                +34 644 74 55 23
+            </a>
+        </div>
         <div class="flex flex-col items-center gap-4 text-slate-500 text-sm">
             <div class="flex gap-6">
                 <a class="hover:text-white transition-colors" href="#">LinkedIn</a>
                 <a class="hover:text-white transition-colors" href="#">GitHub</a>
                 <a class="hover:text-white transition-colors" href="#">Twitter</a>
             </div>
-            <p>© 2023 Javier Granizo Aguilar. Built with Tailwind CSS.</p>
+            <p>© 2026 Javier Granizo Aguilar. Built with Tailwind CSS.</p>
         </div>
     </footer>
 </main>
-</body></html>
+</body>
+</html>
